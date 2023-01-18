@@ -1,0 +1,2158 @@
+-- Cache values
+// Path to a program.
+ARMIE_COMMAND:FILEPATH=ARMIE_COMMAND-NOTFOUND
+
+// Enable AddressSanitizer (ASan)
+ASAN:BOOL=OFF
+
+// ASIMD/NEON available on host
+ASIMD_FOUND:BOOL=false
+
+// Location of 'asmjit'
+ASMJIT_DIR:PATH=/mnt/tank/pytorch/third_party/fbgemm/third_party/asmjit
+
+// Embed 'asmjit' library (no targets)
+ASMJIT_EMBED:BOOL=FALSE
+
+// Disable AArch32 backend (ARM and THUMB)
+ASMJIT_NO_AARCH32:BOOL=FALSE
+
+// Disable AArch64 backend
+ASMJIT_NO_AARCH64:BOOL=FALSE
+
+// Disable extra compilation flags added by AsmJit to its targets
+ASMJIT_NO_CUSTOM_FLAGS:BOOL=FALSE
+
+// Disable all foreign architectures (enables only a native architecture)
+ASMJIT_NO_FOREIGN:BOOL=FALSE
+
+// Disable natvis support (embedding asmjit.natvis in PDB)
+ASMJIT_NO_NATVIS:BOOL=FALSE
+
+// Disable X86/X64 backend
+ASMJIT_NO_X86:BOOL=FALSE
+
+// Build with sanitizers: 'address', 'undefined', etc...
+ASMJIT_SANITIZE:STRING=FALSE
+
+// asmjit source directory from submodules
+ASMJIT_SRC_DIR:STRING=/mnt/tank/pytorch/third_party/fbgemm/third_party/asmjit
+
+// Build 'asmjit' library as static
+ASMJIT_STATIC:BOOL=ON
+
+// Build 'asmjit' test applications
+ASMJIT_TEST:BOOL=FALSE
+
+// ATen install binary subdirectory
+ATEN_INSTALL_BIN_SUBDIR:PATH=bin
+
+// ATen install include subdirectory
+ATEN_INSTALL_INCLUDE_SUBDIR:PATH=include
+
+// ATen install library subdirectory
+ATEN_INSTALL_LIB_SUBDIR:PATH=lib
+
+// Do not build ATen test binaries
+ATEN_NO_TEST:BOOL=OFF
+
+// ATen parallel backend
+ATEN_THREADING:STRING=OMP
+
+// AT install binary subdirectory
+AT_INSTALL_BIN_DIR:PATH=bin
+
+// AT install include subdirectory
+AT_INSTALL_INCLUDE_DIR:PATH=include
+
+// AT install library subdirectory
+AT_INSTALL_LIB_DIR:PATH=lib
+
+// AT install include subdirectory
+AT_INSTALL_SHARE_DIR:PATH=share
+
+// enables rdpms counter to report precise cpu frequency in benchdnn.
+    CAUTION: may not work on all cpus (hence disabled by default)
+BENCHDNN_USE_RDPMC:BOOL=OFF
+
+// Build a 32 bit version of the library.
+BENCHMARK_BUILD_32_BITS:BOOL=OFF
+
+// Flags used by the C++ compiler during coverage builds.
+BENCHMARK_CXX_FLAGS_COVERAGE:STRING=-g
+
+// Allow the downloading and in-tree building of unmet dependencies
+BENCHMARK_DOWNLOAD_DEPENDENCIES:BOOL=OFF
+
+// Enable building and running the assembly tests
+BENCHMARK_ENABLE_ASSEMBLY_TESTS:BOOL=OFF
+
+// Build documentation with Doxygen.
+BENCHMARK_ENABLE_DOXYGEN:BOOL=OFF
+
+// Enable the use of exceptions in the benchmark library.
+BENCHMARK_ENABLE_EXCEPTIONS:BOOL=ON
+
+// Enable building the unit tests which depend on gtest
+BENCHMARK_ENABLE_GTEST_TESTS:BOOL=ON
+
+// Enable installation of benchmark. (Projects embedding benchmark may want to turn this OFF.)
+BENCHMARK_ENABLE_INSTALL:BOOL=OFF
+
+// Enable performance counters provided by libpfm
+BENCHMARK_ENABLE_LIBPFM:BOOL=OFF
+
+// Enable link time optimisation of the benchmark library.
+BENCHMARK_ENABLE_LTO:BOOL=OFF
+
+// Enable testing of the benchmark library.
+BENCHMARK_ENABLE_TESTING:BOOL=OFF
+
+// Build Release candidates with -Werror.
+BENCHMARK_ENABLE_WERROR:BOOL=ON
+
+// Flags used for linking binaries during coverage builds.
+BENCHMARK_EXE_LINKER_FLAGS_COVERAGE:STRING=
+
+// Build Release candidates with -Werror regardless of compiler issues.
+BENCHMARK_FORCE_WERROR:BOOL=OFF
+
+// Enable installation of documentation.
+BENCHMARK_INSTALL_DOCS:BOOL=ON
+
+// Flags used by the shared libraries linker during coverage builds.
+BENCHMARK_SHARED_LINKER_FLAGS_COVERAGE:STRING=
+
+// Use bundled GoogleTest. If disabled, the find_package(GTest) will be used.
+BENCHMARK_USE_BUNDLED_GTEST:BOOL=ON
+
+// Build and test using libc++ as the standard library.
+BENCHMARK_USE_LIBCXX:BOOL=OFF
+
+// Selected BLAS library
+BLAS:STRING=MKL
+
+// Marks whether BLAS was manually set by user or auto-detected
+BLAS_SET_BY_USER:STRING=FALSE
+
+// Tell cmake if Caffe2 is being built alongside torch libs
+BUILDING_WITH_TORCH_LIBS:BOOL=ON
+
+// Build benchmark binary (requires hiredis)
+BUILD_BENCHMARK:BOOL=OFF
+
+// Build C++ binaries
+BUILD_BINARY:BOOL=OFF
+
+// Master flag to build Caffe2
+BUILD_CAFFE2:BOOL=1
+
+// Build Caffe2 operators
+BUILD_CAFFE2_OPS:BOOL=ON
+
+// Build and use Caffe2's own protobuf under third_party
+BUILD_CUSTOM_PROTOBUF:BOOL=ON
+
+// libsleefdft will be built.
+BUILD_DFT:BOOL=OFF
+
+// Build Caffe2 documentation
+BUILD_DOCS:BOOL=OFF
+
+// Master flag to build Executorch
+BUILD_EXECUTORCH:BOOL=ON
+
+// Build Functorch
+BUILD_FUNCTORCH:BOOL=ON
+
+// Builds the googlemock subproject
+BUILD_GMOCK:BOOL=ON
+
+// libsleefgnuabi will be built.
+BUILD_GNUABI_LIBS:BOOL=OFF
+
+// Build header for inlining whole SLEEF functions
+BUILD_INLINE_HEADERS:BOOL=OFF
+
+// Build JNI bindings
+BUILD_JNI:BOOL=OFF
+
+// Build cuda linalg ops as separate library
+BUILD_LAZY_CUDA_LINALG:BOOL=ON
+
+// Build the lazy Torchscript backend, not compatible with mobile builds
+BUILD_LAZY_TS_BACKEND:BOOL=ON
+
+// libsleef will be built.
+BUILD_LIBM:BOOL=ON
+
+// Enable RelWithDebInfo for libtorch_cpu target only
+BUILD_LIBTORCH_CPU_WITH_DEBUG:BOOL=OFF
+
+// Master flag to build Lite Interpreter
+BUILD_LITE_INTERPRETER:BOOL=OFF
+
+// Build autograd function in mobile build (in development)
+BUILD_MOBILE_AUTOGRAD:BOOL=OFF
+
+// Build C++ test binaries for mobile (ARM) targets(need gtest and gbenchmark)
+BUILD_MOBILE_BENCHMARK:BOOL=OFF
+
+// Build C++ test binaries for mobile (ARM) targets(need gtest and gbenchmark)
+BUILD_MOBILE_TEST:BOOL=OFF
+
+// Build C++ binaries for nvfuser benchmarks
+BUILD_NVFUSER_BENCHMARK:BOOL=OFF
+
+// Build Python binaries
+BUILD_ONNX_PYTHON:BOOL=OFF
+
+// Build Python binaries
+BUILD_PYTHON:BOOL=True
+
+// libsleefquad will be built.
+BUILD_QUAD:BOOL=OFF
+
+// Build shared libs
+BUILD_SHARED_LIBS:BOOL=ON
+
+// Build C++ binaries for static runtime benchmarks (need gbenchmark)
+BUILD_STATIC_RUNTIME_BENCHMARK:BOOL=OFF
+
+// Build statically linked test executables
+BUILD_STATIC_TEST_BINS:BOOL=OFF
+
+// Build C++ binaries for tensorexpr benchmarks (need gbenchmark)
+BUILD_TENSOREXPR_BENCHMARK:BOOL=OFF
+
+// Build test binary (requires gtest)
+BUILD_TEST:BOOL=True
+
+// Build the testing tree.
+BUILD_TESTING:BOOL=ON
+
+// Build tests
+BUILD_TESTS:BOOL=
+
+// Header providing backtrace(3) facility
+Backtrace_HEADER:STRING=execinfo.h
+
+// Path to a file.
+Backtrace_INCLUDE_DIR:PATH=/usr/include
+
+// Library providing backtrace(3), empty for default set of libraries
+Backtrace_LIBRARY:FILEPATH=
+
+// A allowlist file of files that one should build.
+CAFFE2_ALLOWLIST:STRING=
+
+// If set, build protobuf inside libcaffe2.so.
+CAFFE2_LINK_LOCAL_PROTOBUF:BOOL=ON
+
+// Statically link CUDA libraries
+CAFFE2_STATIC_LINK_CUDA:BOOL=OFF
+
+// 
+CAFFE2_THIRD_PARTY_ROOT:STRING=/mnt/tank/pytorch/third_party
+
+// Path to a program.
+CCACHE_PROGRAM:FILEPATH=/usr/bin/ccache
+
+// already checked for OpenMP
+CHECKED_OPENMP:BOOL=ON
+
+// Path to a program.
+CLANG_EXE_PATH:FILEPATH=/usr/bin/clang
+
+// Build clog tests
+CLOG_BUILD_TESTS:BOOL=OFF
+
+// Log errors, warnings, and information to stdout/stderr
+CLOG_LOG_TO_STDIO:BOOL=ON
+
+// 
+CLOG_RUNTIME_TYPE:STRING=default
+
+// Path to a program.
+CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
+
+// Path to a program.
+CMAKE_AR:FILEPATH=/usr/bin/ar
+
+// ASM compiler
+CMAKE_ASM_COMPILER:FILEPATH=/usr/bin/cc
+
+// A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler
+CMAKE_ASM_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar
+
+// A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler
+CMAKE_ASM_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib
+
+// Flags used by the ASM compiler during all build types.
+CMAKE_ASM_FLAGS:STRING=
+
+// Flags used by the ASM compiler during DEBUG builds.
+CMAKE_ASM_FLAGS_DEBUG:STRING=-g
+
+// Flags used by the ASM compiler during MINSIZEREL builds.
+CMAKE_ASM_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+// Flags used by the ASM compiler during RELEASE builds.
+CMAKE_ASM_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+// Flags used by the ASM compiler during RELWITHDEBINFO builds.
+CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+// Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel ...
+CMAKE_BUILD_TYPE:STRING=Release
+
+// CUDA architectures
+CMAKE_CUDA_ARCHITECTURES:STRING=52
+
+// CUDA compiler
+CMAKE_CUDA_COMPILER:FILEPATH=/usr/local/cuda-11.8/bin/nvcc
+
+// CUDA compiler launcher
+CMAKE_CUDA_COMPILER_LAUNCHER:STRING=/usr/bin/ccache
+
+// Flags used by the CUDA compiler during all build types.
+CMAKE_CUDA_FLAGS:STRING=
+
+// Flags used by the CUDA compiler during DEBUG builds.
+CMAKE_CUDA_FLAGS_DEBUG:STRING=-g
+
+// Flags used by the CUDA compiler during MINSIZEREL builds.
+CMAKE_CUDA_FLAGS_MINSIZEREL:STRING=-O1 -DNDEBUG
+
+// Flags used by the CUDA compiler during RELEASE builds.
+CMAKE_CUDA_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+// Flags used by the CUDA compiler during RELWITHDEBINFO builds.
+CMAKE_CUDA_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+// CXX compiler
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+
+// A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler
+CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-11
+
+// CXX compiler launcher
+CMAKE_CXX_COMPILER_LAUNCHER:STRING=/usr/bin/ccache
+
+// A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-11
+
+// Flags used by the CXX compiler during all build types.
+CMAKE_CXX_FLAGS:STRING=
+
+// Flags used by the CXX compiler during DEBUG builds.
+CMAKE_CXX_FLAGS_DEBUG:STRING=-g
+
+// Flags used by the CXX compiler during MINSIZEREL builds.
+CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+// Flags used by the CXX compiler during RELEASE builds.
+CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+// Flags used by the C++ compiler during RelWithAssert builds.
+CMAKE_CXX_FLAGS_RELWITHASSERT:STRING=-O3   -D_FORTIFY_SOURCE=2
+
+// Flags used by the CXX compiler during RELWITHDEBINFO builds.
+CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+// Flags used by the C++ compiler during RelWithMdd build.
+CMAKE_CXX_FLAGS_RELWITHMDD:STRING=-O3 -D_DEBUG -D_DEBUG -D_FORTIFY_SOURCE=2
+
+// The C++ standard whose features are requested to build this target.
+CMAKE_CXX_STANDARD:STRING=17
+
+// C compiler
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+
+// A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-11
+
+// C compiler launcher
+CMAKE_C_COMPILER_LAUNCHER:STRING=/usr/bin/ccache
+
+// A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-11
+
+// Flags used by the C compiler during all build types.
+CMAKE_C_FLAGS:STRING=
+
+// Flags used by the C compiler during DEBUG builds.
+CMAKE_C_FLAGS_DEBUG:STRING=-g
+
+// Flags used by the C compiler during MINSIZEREL builds.
+CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+// Flags used by the C compiler during RELEASE builds.
+CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+// Flags used by the C compiler during RelWithAssert builds.
+CMAKE_C_FLAGS_RELWITHASSERT:STRING=-O3   -D_FORTIFY_SOURCE=2
+
+// Flags used by the C compiler during RELWITHDEBINFO builds.
+CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+// Flags used by the C compiler during RelWithMdd build
+CMAKE_C_FLAGS_RELWITHMDD:STRING=-O3 -D_DEBUG -D_DEBUG -D_FORTIFY_SOURCE=2
+
+// The C standard whose features are requested to build this target.
+CMAKE_C_STANDARD:STRING=11
+
+// Path to a program.
+CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
+
+// Flags used by the linker during all build types.
+CMAKE_EXE_LINKER_FLAGS:STRING=
+
+// Flags used by the linker during DEBUG builds.
+CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the linker during MINSIZEREL builds.
+CMAKE_EXE_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the linker during RELEASE builds.
+CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used for linking binaries during RelWithAssert builds.
+CMAKE_EXE_LINKER_FLAGS_RELWITHASSERT:STRING=
+
+// Flags used by the linker during RELWITHDEBINFO builds.
+CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// Flags used for linking binaries during RelWithMdd builds.
+CMAKE_EXE_LINKER_FLAGS_RELWITHMDD:STRING=
+
+// Enable/Disable output of compile commands during generation.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
+
+// User executables (bin)
+CMAKE_INSTALL_BINDIR:PATH=bin
+
+// Directory relative to CMAKE_INSTALL to install the cmake configuration files
+CMAKE_INSTALL_CMAKEDIR:STRING=lib/cmake/protobuf
+
+// Read-only architecture-independent data (DATAROOTDIR)
+CMAKE_INSTALL_DATADIR:PATH=
+
+// Read-only architecture-independent data root (share)
+CMAKE_INSTALL_DATAROOTDIR:PATH=share
+
+// Documentation root (DATAROOTDIR/doc/PROJECT_NAME)
+CMAKE_INSTALL_DOCDIR:PATH=
+
+// C header files (include)
+CMAKE_INSTALL_INCLUDEDIR:PATH=include
+
+// Info documentation (DATAROOTDIR/info)
+CMAKE_INSTALL_INFODIR:PATH=
+
+// Object code libraries (lib)
+CMAKE_INSTALL_LIBDIR:PATH=lib
+
+// Program executables (libexec)
+CMAKE_INSTALL_LIBEXECDIR:PATH=libexec
+
+// Locale-dependent data (DATAROOTDIR/locale)
+CMAKE_INSTALL_LOCALEDIR:PATH=
+
+// Modifiable single-machine data (var)
+CMAKE_INSTALL_LOCALSTATEDIR:PATH=var
+
+// Man documentation (DATAROOTDIR/man)
+CMAKE_INSTALL_MANDIR:PATH=
+
+// C header files for non-gcc (/usr/include)
+CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
+
+// Install path prefix, prepended onto install directories.
+CMAKE_INSTALL_PREFIX:PATH=/mnt/tank/pytorch/torch
+
+// Run-time variable data (LOCALSTATEDIR/run)
+CMAKE_INSTALL_RUNSTATEDIR:PATH=
+
+// System admin executables (sbin)
+CMAKE_INSTALL_SBINDIR:PATH=sbin
+
+// Modifiable architecture-independent data (com)
+CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
+
+// Read-only single-machine data (etc)
+CMAKE_INSTALL_SYSCONFDIR:PATH=etc
+
+// Path to a program.
+CMAKE_LINKER:FILEPATH=/usr/bin/ld
+
+// Program used to build from build.ninja files.
+CMAKE_MAKE_PROGRAM:FILEPATH=/mnt/tank/venv/bin/ninja
+
+// Flags used by the linker during the creation of modules during all build types.
+CMAKE_MODULE_LINKER_FLAGS:STRING=
+
+// Flags used by the linker during the creation of modules during DEBUG builds.
+CMAKE_MODULE_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the linker during the creation of modules during MINSIZEREL builds.
+CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the linker during the creation of modules during RELEASE builds.
+CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used by the linker during the creation of modules during RELWITHDEBINFO builds.
+CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// Path to a program.
+CMAKE_NM:FILEPATH=/usr/bin/nm
+
+// Path to a program.
+CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
+
+// Path to a program.
+CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
+
+// Path to a program.
+CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
+
+// Path to a program.
+CMAKE_READELF:FILEPATH=/usr/bin/readelf
+
+// Flags used by the linker during the creation of shared libraries during all build types.
+CMAKE_SHARED_LINKER_FLAGS:STRING=
+
+// Flags used by the linker during the creation of shared libraries during DEBUG builds.
+CMAKE_SHARED_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the linker during the creation of shared libraries during MINSIZEREL builds.
+CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the linker during the creation of shared libraries during RELEASE builds.
+CMAKE_SHARED_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used by the shared libraries linker during RelWithAssert builds.
+CMAKE_SHARED_LINKER_FLAGS_RELWITHASSERT:STRING=
+
+// Flags used by the linker during the creation of shared libraries during RELWITHDEBINFO builds.
+CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// Flags used by the shared libraries linker during RelWithMdd builds.
+CMAKE_SHARED_LINKER_FLAGS_RELWITHMDD:STRING=
+
+// If set, runtime paths are not added when installing shared libraries, but are added when building.
+CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
+
+// If set, runtime paths are not added when using shared libraries.
+CMAKE_SKIP_RPATH:BOOL=NO
+
+// Flags used by the linker during the creation of static libraries during all build types.
+CMAKE_STATIC_LINKER_FLAGS:STRING=
+
+// Flags used by the linker during the creation of static libraries during DEBUG builds.
+CMAKE_STATIC_LINKER_FLAGS_DEBUG:STRING=
+
+// Flags used by the linker during the creation of static libraries during MINSIZEREL builds.
+CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL:STRING=
+
+// Flags used by the linker during the creation of static libraries during RELEASE builds.
+CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
+
+// Flags used by the linker during the creation of static libraries during RELWITHDEBINFO builds.
+CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+// Path to a program.
+CMAKE_STRIP:FILEPATH=/usr/bin/strip
+
+// If this value is on, makefiles will be generated without the .SILENT directive, and all commands will be echoed to the console during the make.  This is useful for debugging only. With Visual Studio IDE projects all commands are done without /nologo.
+CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+// Confu-style dependencies binary directory
+CONFU_DEPENDENCIES_BINARY_DIR:PATH=/mnt/tank/pytorch/build/confu-deps
+
+// Confu-style dependencies source directory
+CONFU_DEPENDENCIES_SOURCE_DIR:PATH=/mnt/tank/pytorch/build/confu-srcs
+
+// OMAP3 available on host
+CORTEXA8_FOUND:BOOL=false
+
+// OMAP4 available on host
+CORTEXA9_FOUND:BOOL=false
+
+// Path to the coverage program that CTest uses for performing coverage inspection
+COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
+
+// Extra command line flags to pass to the coverage tool
+COVERAGE_EXTRA_FLAGS:STRING=-l
+
+// builds oneDNN Graph with coverage support
+COVERAGE_REPORT:BOOL=OFF
+
+// Build cpuinfo micro-benchmarks
+CPUINFO_BUILD_BENCHMARKS:BOOL=OFF
+
+// Build cpuinfo mock tests
+CPUINFO_BUILD_MOCK_TESTS:BOOL=OFF
+
+// Build pkg-config manifest
+CPUINFO_BUILD_PKG_CONFIG:BOOL=ON
+
+// Build command-line tools
+CPUINFO_BUILD_TOOLS:BOOL=OFF
+
+// Build cpuinfo unit tests
+CPUINFO_BUILD_UNIT_TESTS:BOOL=OFF
+
+// 
+CPUINFO_LIBRARY_TYPE:STRING=static
+
+// 
+CPUINFO_LOG_LEVEL:STRING=error
+
+// Type of runtime library (shared, static, or default) to use
+CPUINFO_RUNTIME_TYPE:STRING=default
+
+// cpuinfo source directory
+CPUINFO_SOURCE_DIR:STRING=/mnt/tank/pytorch/third_party/cpuinfo
+
+// How many times to retry timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_COUNT:STRING=3
+
+// How long to wait between timed-out CTest submissions.
+CTEST_SUBMIT_RETRY_DELAY:STRING=5
+
+// The directory where CUB includes reside
+CUB_INCLUDE_DIR:PATH=/usr/local/cuda-11.8/include
+
+// Compile device code in 64 bit mode
+CUDA_64_BIT_DEVICE_CODE:BOOL=ON
+
+// Attach the build rule to the CUDA source file.  Enable only when the CUDA source file is added to at most one target.
+CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE:BOOL=ON
+
+// Generate and parse .cubin files in Device mode.
+CUDA_BUILD_CUBIN:BOOL=OFF
+
+// Build in Emulation mode
+CUDA_BUILD_EMULATION:BOOL=OFF
+
+// "cudart" library
+CUDA_CUDART_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libcudart.so
+
+// Path to a library.
+CUDA_CUDA_LIB:FILEPATH=/usr/local/cuda-11.8/lib64/stubs/libcuda.so
+
+// "cuda" library (older versions only).
+CUDA_CUDA_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcuda.so
+
+// Directory to put all the output files.  If blank it will default to the CMAKE_CURRENT_BINARY_DIR
+CUDA_GENERATED_OUTPUT_DIR:PATH=
+
+// Generated file extension
+CUDA_HOST_COMPILATION_CPP:BOOL=ON
+
+// Host side compiler used by NVCC
+CUDA_HOST_COMPILER:FILEPATH=/usr/bin/cc
+
+// Path to a program.
+CUDA_NVCC_EXECUTABLE:FILEPATH=/usr/local/cuda-11.8/bin/nvcc
+
+// Semi-colon delimit multiple arguments. during all build types.
+CUDA_NVCC_FLAGS:STRING=
+
+// Semi-colon delimit multiple arguments. during DEBUG builds.
+CUDA_NVCC_FLAGS_DEBUG:STRING=
+
+// Semi-colon delimit multiple arguments. during MINSIZEREL builds.
+CUDA_NVCC_FLAGS_MINSIZEREL:STRING=
+
+// Semi-colon delimit multiple arguments. during RELEASE builds.
+CUDA_NVCC_FLAGS_RELEASE:STRING=
+
+// Semi-colon delimit multiple arguments. during RELWITHDEBINFO builds.
+CUDA_NVCC_FLAGS_RELWITHDEBINFO:STRING=
+
+// Path to a library.
+CUDA_NVRTC_LIB:FILEPATH=/usr/local/cuda-11.8/lib64/libnvrtc.so
+
+// Propagate C/CXX_FLAGS and friends to the host compiler via -Xcompile
+CUDA_PROPAGATE_HOST_FLAGS:BOOL=ON
+
+// Blacklisted flags to prevent propagation
+CUDA_PROPAGATE_HOST_FLAGS_BLACKLIST:STRING=
+
+// Path to a file.
+CUDA_SDK_ROOT_DIR:PATH=CUDA_SDK_ROOT_DIR-NOTFOUND
+
+// Compile CUDA objects with separable compilation enabled.  Requires CUDA 5.0+
+CUDA_SEPARABLE_COMPILATION:BOOL=OFF
+
+// 
+CUDA_SOURCE_DIR:STRING=/usr/local/cuda-11.8
+
+// Path to a file.
+CUDA_TOOLKIT_INCLUDE:PATH=/usr/local/cuda-11.8/include
+
+// Toolkit location.
+CUDA_TOOLKIT_ROOT_DIR:PATH=/usr/local/cuda-11.8
+
+// Print out the commands run while compiling the CUDA source file.  With the Makefile generator this defaults to VERBOSE variable specified on the command line, but can be forced on with this option.
+CUDA_VERBOSE_BUILD:BOOL=OFF
+
+// Version of CUDA as computed from nvcc.
+CUDA_VERSION:STRING=11.8
+
+// "cublas" library
+CUDA_cublas_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libcublas.so
+
+// "cudadevrt" library
+CUDA_cudadevrt_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libcudadevrt.a
+
+// static CUDA runtime library
+CUDA_cudart_static_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libcudart_static.a
+
+// "cufft" library
+CUDA_cufft_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libcufft.so
+
+// "cupti" library
+CUDA_cupti_LIBRARY:FILEPATH=CUDA_cupti_LIBRARY-NOTFOUND
+
+// "curand" library
+CUDA_curand_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libcurand.so
+
+// "cusolver" library
+CUDA_cusolver_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libcusolver.so
+
+// "cusparse" library
+CUDA_cusparse_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libcusparse.so
+
+// "nppc" library
+CUDA_nppc_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libnppc.so
+
+// "nppial" library
+CUDA_nppial_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libnppial.so
+
+// "nppicc" library
+CUDA_nppicc_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libnppicc.so
+
+// "nppicom" library
+CUDA_nppicom_LIBRARY:FILEPATH=CUDA_nppicom_LIBRARY-NOTFOUND
+
+// "nppidei" library
+CUDA_nppidei_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libnppidei.so
+
+// "nppif" library
+CUDA_nppif_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libnppif.so
+
+// "nppig" library
+CUDA_nppig_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libnppig.so
+
+// "nppim" library
+CUDA_nppim_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libnppim.so
+
+// "nppist" library
+CUDA_nppist_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libnppist.so
+
+// "nppisu" library
+CUDA_nppisu_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libnppisu.so
+
+// "nppitc" library
+CUDA_nppitc_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libnppitc.so
+
+// "npps" library
+CUDA_npps_LIBRARY:FILEPATH=/usr/local/cuda-11.8/lib64/libnpps.so
+
+// Folder containing NVIDIA cuDNN header files
+CUDNN_INCLUDE_DIR:PATH=
+
+// Path to a file.
+CUDNN_INCLUDE_PATH:PATH=/usr/include
+
+// Path to the cudnn library file (e.g., libcudnn.so)
+CUDNN_LIBRARY:PATH=
+
+// Path to a library.
+CUDNN_LIBRARY_PATH:FILEPATH=/usr/lib/x86_64-linux-gnu/libcudnn.so
+
+// Folder containing NVIDIA cuDNN
+CUDNN_ROOT:PATH=
+
+// Look for static CUDNN
+CUDNN_STATIC:BOOL=OFF
+
+// Path to a file.
+CUPTI_INCLUDE_DIR:PATH=/usr/local/cuda-11.8/include
+
+// Path to a library.
+CUPTI_LIBRARY_PATH:FILEPATH=/usr/local/cuda-11.8/lib64/libcupti.so
+
+// CXX AVX2 flags
+CXX_AVX2_FLAGS:STRING=-mavx2 -mfma
+
+// CXX AVX2 support
+CXX_AVX2_FOUND:BOOL=TRUE
+
+// CXX AVX512 flags
+CXX_AVX512_FLAGS:STRING=
+
+// CXX AVX512 support
+CXX_AVX512_FOUND:BOOL=FALSE
+
+// CXX AVX flags
+CXX_AVX_FLAGS:STRING=-mavx
+
+// CXX AVX support
+CXX_AVX_FOUND:BOOL=TRUE
+
+// C AVX2 flags
+C_AVX2_FLAGS:STRING=-mavx2 -mfma
+
+// C AVX2 support
+C_AVX2_FOUND:BOOL=TRUE
+
+// C AVX512 flags
+C_AVX512_FLAGS:STRING=
+
+// C AVX512 support
+C_AVX512_FOUND:BOOL=FALSE
+
+// C AVX flags
+C_AVX_FLAGS:STRING=-mavx
+
+// C AVX support
+C_AVX_FOUND:BOOL=TRUE
+
+// Maximum time allowed before CTest will kill the test.
+DART_TESTING_TIMEOUT:STRING=1500
+
+// Disable AVX2
+DISABLE_AVX2:BOOL=OFF
+
+// Disable AVX512F
+DISABLE_AVX512F:BOOL=OFF
+
+// Disable testing the DFT library with FFTW
+DISABLE_FFTW:BOOL=OFF
+
+// Disable float128
+DISABLE_FLOAT128:BOOL=OFF
+
+// Disable FMA4
+DISABLE_FMA4:BOOL=OFF
+
+// Disable long double
+DISABLE_LONG_DOUBLE:BOOL=OFF
+
+// Disable OPENMP
+DISABLE_OPENMP:BOOL=OFF
+
+// Disable SSE2
+DISABLE_SSE2:BOOL=OFF
+
+// Disable SSE4
+DISABLE_SSE4:BOOL=OFF
+
+// Disable SVE
+DISABLE_SVE:BOOL=OFF
+
+// Disable VSX
+DISABLE_VSX:BOOL=OFF
+
+// Disable VSX3
+DISABLE_VSX3:BOOL=OFF
+
+// Disable VXE
+DISABLE_VXE:BOOL=OFF
+
+// Disable VXE2
+DISABLE_VXE2:BOOL=OFF
+
+// Enables use of AArch64 optimised functions
+    from Arm Compute Library.
+    This is only supported on AArch64 builds and assumes there is a
+    functioning Compute Library build available at the location specified by the
+    environment variable ACL_ROOT_DIR.
+DNNL_AARCH64_USE_ACL:BOOL=OFF
+
+// Use an external BLAS library. Valid values:
+      - NONE (default)
+        Use in-house implementation.
+      - MKL
+        Intel Math Kernel Library (Intel MKL)
+        (https://software.intel.com/content/www/us/en/develop/tools/math-kernel-library.html)
+      - OPENBLAS
+        (https://www.openblas.net)
+      - ARMPL
+        Arm Performance Libraries
+        (https://developer.arm.com/tools-and-software/server-and-hpc/downloads/arm-performance-libraries)
+      - ANY
+        FindBLAS will search default library paths for a known BLAS installation.
+DNNL_BLAS_VENDOR:STRING=NONE
+
+// specifies whether oneDNN library will use special testing environment for
+    internal testing processes
+DNNL_BUILD_FOR_CI:BOOL=OFF
+
+// specifies which supported tool for code coverage will be used
+    Currently only gcov supported
+DNNL_CODE_COVERAGE:STRING=OFF
+
+// specifies host compiler for Intel oneAPI DPC++ Compiler
+DNNL_DPCPP_HOST_COMPILER:STRING=DEFAULT
+
+// enables control of CPU ISA specific hints by oneDNN via DNNL_CPU_ISA_HINTS
+    environment variable and dnnl_set_cpu_isa_hints() function
+DNNL_ENABLE_CPU_ISA_HINTS:BOOL=ON
+
+// Enable ITT Tasks tagging feature and tag all primitive execution 
+    (on by default). VTune Amplifier can group profiling results based 
+    on those ITT tasks and show corresponding timeline information.
+DNNL_ENABLE_ITT_TASKS:BOOL=ON
+
+// Enable registration of oneDNN kernels that are generated at
+    runtime with VTune Amplifier (on by default). Without the
+    registrations, VTune Amplifier would report data collected inside
+    the kernels as `outside any known module`.
+DNNL_ENABLE_JIT_PROFILING:BOOL=ON
+
+// enables control of CPU ISA detected by oneDNN via DNNL_MAX_CPU_ISA
+    environment variable and dnnl_set_max_cpu_isa() function
+DNNL_ENABLE_MAX_CPU_ISA:BOOL=ON
+
+// enables memory-related debug functionality,
+    such as buffer overflow (default) and underflow, using gtests and benchdnn.
+    Additionaly, this option enables testing of out-of-memory handling by the
+    library, such as failed memory allocations, using primitive-related gtests.
+    This feature is experimental and is only available on Linux.
+DNNL_ENABLE_MEM_DEBUG:BOOL=OFF
+
+// Specifies a set of primitives to be available at build time. Valid values:
+    - ALL (the default). Includes all primitives to be enabled.
+    - <PRIMITIVE_NAME>. Includes only the selected primitive to be enabled.
+      Possible values are: BATCH_NORMALIZATION, BINARY, CONCAT, CONVOLUTION,
+      DECONVOLUTION, ELTWISE, INNER_PRODUCT, LAYER_NORMALIZATION, LRN, MATMUL,
+      POOLING, PRELU, REDUCTION, REORDER, RESAMPLING, RNN, SHUFFLE, SOFTMAX,
+      SUM.
+    - <PRIMITIVE_NAME>;<PRIMITIVE_NAME>;... Includes only selected primitives to
+      be enabled at build time. This is treated as CMake string, thus, semicolon
+      is a mandatory delimiter between names. This is the way to specify several
+      primitives to be available in the final binary.
+DNNL_ENABLE_PRIMITIVE:STRING=ALL
+
+// Specifies a set of implementations using specific CPU ISA to be available
+    at build time. Regardless of value chosen, compiler-based optimized
+    implementations will always be available. Valid values:
+    - ALL (the default). Includes all ISA to be enabled.
+    - <ISA_NAME>. Includes selected and all "less" ISA to be enabled.
+      Possible values are: SSE41, AVX2, AVX512, AMX. The linear order is
+      SSE41 < AVX2 < AVX512 < AMX. It means that if user selects, e.g. AVX2 ISA,
+      SSE41 implementations will also be available at build time.
+DNNL_ENABLE_PRIMITIVE_CPU_ISA:STRING=ALL
+
+// Specifies a set of implementations using specific GPU ISA to be available
+    at build time. Regardless of value chosen, reference OpenCL-based
+    implementations will always be available. Valid values:
+    - ALL (the default). Includes all ISA to be enabled.
+    - <ISA_NAME>;<ISA_NAME>;... Includes only selected ISA to be enabled.
+      Possible values are: GEN9, GEN11, XELP, XEHP, XEHPG, XEHPC.
+DNNL_ENABLE_PRIMITIVE_GPU_ISA:STRING=ALL
+
+// enables stack checker that can be used to get
+    information about stack consumption for a particular library entry point.
+    This feature is only available on Linux (see src/common/stack_checker.hpp
+    for more details).
+    Note: This option requires enabling concurrent scratchpad
+    (DNNL_ENABLE_CONCURRENT_EXEC).
+DNNL_ENABLE_STACK_CHECKER:BOOL=OFF
+
+// Specifies a set of functionality to be available at build time. Designed to
+    decrease the final memory disk footprint of the shared object or application
+    statically linked against the library. Valid values:
+    - TRAINING (the default). Includes all functionality to be enabled.
+    - INFERENCE. Includes only forward propagation kind functionality and their
+      dependencies.
+DNNL_ENABLE_WORKLOAD:STRING=TRAINING
+
+// Enables experimental features in oneDNN.
+    When enabled, each experimental feature has to be individually selected
+    using environment variables.
+DNNL_EXPERIMENTAL:BOOL=OFF
+
+// specifies target GPU vendor for GPU engines.
+    Can be INTEL (default) or NVIDIA.
+DNNL_GPU_VENDOR:STRING=INTEL
+
+// builds graph compiler backend
+DNNL_GRAPH_BUILD_COMPILER_BACKEND:BOOL=OFF
+
+// builds examples
+DNNL_GRAPH_BUILD_EXAMPLES:BOOL=OFF
+
+// specifies whether oneDNN Graph library will use special testing enviroment
+    for internal testing processes
+DNNL_GRAPH_BUILD_FOR_CI:BOOL=OFF
+
+// builds tests
+DNNL_GRAPH_BUILD_TESTS:BOOL=OFF
+
+// 
+DNNL_GRAPH_CPU_RUNTIME:STRING=OMP
+
+// builds oneDNN Graph with AddressSanitizer
+DNNL_GRAPH_ENABLE_ASAN:BOOL=OFF
+
+// enables compiled partition cache.
+DNNL_GRAPH_ENABLE_COMPILED_PARTITION_CACHE:BOOL=ON
+
+// allows oneDNN Graph library to dump graphs and pattern file via ONEDNN_GRAPH_DUMP 
+    environment variable
+DNNL_GRAPH_ENABLE_DUMP:BOOL=OFF
+
+// specifies the runtime to use for GPU engines.
+    Can be NONE (default; no GPU engines)
+    or DPCPP (DPC++ GPU engines).
+DNNL_GRAPH_GPU_RUNTIME:STRING=NONE
+
+// allows backends in oneDNN Graph library to generate user-comprehensive
+    layout id which helps debugging for layout propagation
+DNNL_GRAPH_LAYOUT_DEBUG:BOOL=OFF
+
+// 
+DNNL_GRAPH_LIBRARY_TYPE:STRING=STATIC
+
+// graph compiler backend LLVM config
+DNNL_GRAPH_LLVM_CONFIG:STRING=AUTO
+
+// uses features from C++ standard 17
+DNNL_GRAPH_SUPPORT_CXX17:BOOL=OFF
+
+// specifies testing targets coverage. Supports CI, NIGHTLY.
+    
+    When CI option is set, it enables a subset of test targets to run. When
+    NIGHTLY option is set, it enables a broader set of test targets to run.
+DNNL_GRAPH_TEST_SET:STRING=CI
+
+// allows oneDNN Graph library be verbose whenever ONEDNN_GRAPH_VERBOSE
+    environment variable set to 1, 2 or 3
+DNNL_GRAPH_VERBOSE:BOOL=ON
+
+// specifies installation mode; supports DEFAULT or BUNDLE.
+
+    When BUNDLE option is set oneDNN will be installed as a bundle
+    which contains examples and benchdnn.
+DNNL_INSTALL_MODE:STRING=DEFAULT
+
+// specifies name of the library. For example, user can use this variable to
+     specify a custom library names for CPU and GPU configurations to safely
+     include them into their CMake project via add_subdirectory
+DNNL_LIBRARY_NAME:STRING=dnnl
+
+// specifies testing targets coverage. Supports CI, CI_NO_CORR, NIGHTLY.
+
+    When CI option is set, it enables a subset of test targets to run. When
+    CI_NO_CORR option is set, it enables same coverage as for CI option, but
+    switches off correctness validation for benchdnn targets. When NIGHTLY
+    option is set, it enables a broader set of test targets to run.
+DNNL_TEST_SET:STRING=CI
+
+// instructs build system to use a Clang sanitizer. Possible values:
+    Address: enables AddressSanitizer
+    Leak: enables LeakSanitizer
+    Memory: enables MemorySanitizer
+    MemoryWithOrigin: enables MemorySanitizer with origin tracking
+    Thread: enables ThreadSanitizer
+    Undefined: enables UndefinedBehaviourSanitizer
+    This feature is experimental and is only available on Linux.
+DNNL_USE_CLANG_SANITIZER:STRING=
+
+// Instructs build system to use clang-tidy. Valid values:
+    - NONE (default)
+      Clang-tidy is disabled.
+    - CHECK
+      Enables checks from .clang-tidy.
+    - FIX
+      Enables checks from .clang-tidy and fix found issues.
+    This feature is only available on Linux.
+DNNL_USE_CLANG_TIDY:STRING=NONE
+
+// If DNNL_ENABLE_PRIMITIVE_CACHE
+    is ON enables using runtime objects in the primitive cache
+DNNL_USE_RT_OBJECTS_IN_PRIMITIVE_CACHE:BOOL=ON
+
+// allows oneDNN be verbose whenever ONEDNN_VERBOSE
+    environment variable set to 1
+DNNL_VERBOSE:BOOL=ON
+
+// treat warnings as errors
+DNNL_WERROR:BOOL=OFF
+
+// Dot tool for use with Doxygen
+DOXYGEN_DOT_EXECUTABLE:FILEPATH=DOXYGEN_DOT_EXECUTABLE-NOTFOUND
+
+// Doxygen documentation generation tool (https://www.doxygen.nl)
+DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
+
+// Path to a program.
+DOXYREST_EXECUTABLE:FILEPATH=DOXYREST_EXECUTABLE-NOTFOUND
+
+// Enable alternative division method (aarch64 only)
+ENABLE_ALTDIV:BOOL=OFF
+
+// Enable alternative sqrt method (aarch64 only)
+ENABLE_ALTSQRT:BOOL=OFF
+
+// Enable CUDA
+ENABLE_CUDA:BOOL=OFF
+
+// Enable LTO on GCC or ThinLTO on clang
+ENABLE_LTO:BOOL=OFF
+
+// Build fails if AVX is not supported by the compiler
+ENFORCE_AVX:BOOL=OFF
+
+// Build fails if AVX2 is not supported by the compiler
+ENFORCE_AVX2:BOOL=OFF
+
+// Build fails if AVX512F is not supported by the compiler
+ENFORCE_AVX512F:BOOL=OFF
+
+// Build fails if CUDA is not supported
+ENFORCE_CUDA:BOOL=OFF
+
+// Build fails if float128 is not supported by the compiler
+ENFORCE_FLOAT128:BOOL=OFF
+
+// Build fails if FMA4 is not supported by the compiler
+ENFORCE_FMA4:BOOL=OFF
+
+// Build fails if long double is not supported by the compiler
+ENFORCE_LONG_DOUBLE:BOOL=OFF
+
+// Build fails if OPENMP is not supported by the compiler
+ENFORCE_OPENMP:BOOL=OFF
+
+// Build fails if SSE2 is not supported by the compiler
+ENFORCE_SSE2:BOOL=OFF
+
+// Build fails if SSE4 is not supported by the compiler
+ENFORCE_SSE4:BOOL=OFF
+
+// Build fails if SVE is not supported by the compiler
+ENFORCE_SVE:BOOL=OFF
+
+// Build fails if tester is not available
+ENFORCE_TESTER:BOOL=OFF
+
+// Build fails if tester3 is not built
+ENFORCE_TESTER3:BOOL=OFF
+
+// Build fails if VSX is not supported by the compiler
+ENFORCE_VSX:BOOL=OFF
+
+// Build fails if VSX3 is not supported by the compiler
+ENFORCE_VSX3:BOOL=OFF
+
+// Build fails if VXE is not supported by the compiler
+ENFORCE_VXE:BOOL=OFF
+
+// Build fails if VXE2 is not supported by the compiler
+ENFORCE_VXE2:BOOL=OFF
+
+// Experimental option to use a single thread pool for inter- and intra-op parallelism
+EXPERIMENTAL_SINGLE_THREAD_POOL:STRING=0
+
+// Build fbgemm benchmarks
+FBGEMM_BUILD_BENCHMARKS:BOOL=OFF
+
+// Build fbgemm documentation
+FBGEMM_BUILD_DOCS:BOOL=OFF
+
+// Build fbgemm_gpu library
+FBGEMM_BUILD_FBGEMM_GPU:BOOL=OFF
+
+// Build fbgemm unit tests
+FBGEMM_BUILD_TESTS:BOOL=OFF
+
+// 
+FBGEMM_LIBRARY_TYPE:STRING=static
+
+// FBGEMM source directory
+FBGEMM_SOURCE_DIR:STRING=/mnt/tank/pytorch/third_party/fbgemm
+
+// Path to a file.
+FFMPEG_AVCODEC_INCLUDE_DIR:PATH=/usr/include/x86_64-linux-gnu
+
+// Path to a library.
+FFMPEG_LIBAVCODEC:FILEPATH=/usr/lib/x86_64-linux-gnu/libavcodec.so
+
+// Path to a library.
+FFMPEG_LIBAVFORMAT:FILEPATH=/usr/lib/x86_64-linux-gnu/libavformat.so
+
+// Path to a library.
+FFMPEG_LIBAVUTIL:FILEPATH=/usr/lib/x86_64-linux-gnu/libavutil.so
+
+// Path to a library.
+FFMPEG_LIBSWRESAMPLE:FILEPATH=/usr/lib/x86_64-linux-gnu/libswresample.so
+
+// Path to a library.
+FFMPEG_LIBSWSCALE:FILEPATH=/usr/lib/x86_64-linux-gnu/libswscale.so
+
+// Generate the cuda-test target.
+FMT_CUDA_TEST:BOOL=OFF
+
+// Debug library postfix.
+FMT_DEBUG_POSTFIX:STRING=d
+
+// Generate the doc target.
+FMT_DOC:BOOL=OFF
+
+// Generate the fuzz target.
+FMT_FUZZ:BOOL=OFF
+
+// Installation directory for include files, a relative path that will be joined with /mnt/tank/pytorch/torch or an absolute path.
+FMT_INC_DIR:STRING=include
+
+// Generate the install target.
+FMT_INSTALL:BOOL=OFF
+
+// Include core requiring OS (Windows/Posix) 
+FMT_OS:BOOL=ON
+
+// Enable extra warnings and expensive tests.
+FMT_PEDANTIC:BOOL=OFF
+
+// Generate the test target.
+FMT_TEST:BOOL=OFF
+
+// Halt the compilation with an error on compiler warnings.
+FMT_WERROR:BOOL=OFF
+
+// Force a 32bit compile on 64bit
+FORCE_32:BOOL=OFF
+
+// Build with Werror
+FOXI_WERROR:BOOL=OFF
+
+// Build FP16 micro-benchmarks
+FP16_BUILD_BENCHMARKS:BOOL=OFF
+
+// Build FP16 unit tests
+FP16_BUILD_TESTS:BOOL=OFF
+
+// 
+FXDIV_BUILD_BENCHMARKS:BOOL=OFF
+
+// 
+FXDIV_BUILD_TESTS:BOOL=OFF
+
+// FXdiv source directory
+FXDIV_SOURCE_DIR:STRING=/mnt/tank/pytorch/third_party/FXdiv
+
+// Allow use of inline assembly in FXdiv
+FXDIV_USE_INLINE_ASSEMBLY:BOOL=OFF
+
+// Path to a program.
+GITCOMMAND:FILEPATH=/usr/bin/git
+
+// Git command line client
+GIT_EXECUTABLE:FILEPATH=/usr/bin/git
+
+// 
+GLOO_INSTALL:BOOL=OFF
+
+// 
+GLOO_STATIC_OR_SHARED:STRING=STATIC
+
+// Build CUDA with FindCUDATookit.cmake and enable_language(CUDA)
+GLOO_USE_CUDA_TOOLKIT:BOOL=OFF
+
+// Google Test source directory
+GOOGLETEST_SOURCE_DIR:STRING=/mnt/tank/pytorch/third_party/googletest
+
+// Whether to add SOVERSION to the shared objects
+HAVE_SOVERSION:BOOL=OFF
+
+// Path to a file.
+IDEEP_INCLUDE_DIR:PATH=/mnt/tank/pytorch/third_party/ideep/include
+
+// Enable installation of googletest. (Projects embedding googletest may want to turn this OFF.)
+INSTALL_GTEST:BOOL=OFF
+
+// Install test binaries if BUILD_TEST is on
+INSTALL_TEST:BOOL=ON
+
+// Root directory of the Intel Compiler Suite (contains ipp, mkl, etc.)
+INTEL_COMPILER_DIR:STRING=/opt/intel
+
+// Root directory of the Intel MKL (standalone)
+INTEL_MKL_DIR:STRING=/opt/intel/mkl
+
+// Root directory of the Intel OpenMP (standalone)
+INTEL_OMP_DIR:STRING=/opt/intel/mkl
+
+// ptmarks support
+ITT_API_IPT_SUPPORT:BOOL=OFF
+
+// Path to a file.
+ITT_INCLUDE_DIR:PATH=/mnt/tank/pytorch/third_party/ittapi/include
+
+// Build kineto unit tests
+KINETO_BUILD_TESTS:BOOL=OFF
+
+// 
+KINETO_LIBRARY_TYPE:STRING=static
+
+// 
+KINETO_SOURCE_DIR:STRING=/mnt/tank/pytorch/third_party/kineto/libkineto
+
+// Path to a library.
+LIBFFTW3:FILEPATH=LIBFFTW3-NOTFOUND
+
+// Path to a library.
+LIBGMP:FILEPATH=/usr/lib/x86_64-linux-gnu/libgmp.so
+
+// 
+LIBKINETO_NOCUPTI:STRING=OFF
+
+// 
+LIBKINETO_NOROCTRACER:BOOL=ON
+
+// Path to a library.
+LIBM:FILEPATH=/usr/lib/x86_64-linux-gnu/libm.so
+
+// Path to a library.
+LIBNVTOOLSEXT:FILEPATH=/usr/local/cuda-11.8/lib64/libnvToolsExt.so
+
+// Path to a library.
+LIBRT:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.a
+
+// libshm install library directory
+LIBSHM_INSTALL_LIB_SUBDIR:PATH=lib
+
+// Path to a library.
+LIB_MPFR:FILEPATH=LIB_MPFR-NOTFOUND
+
+// Path to a file.
+LLGA_INCLUDE_DIR:PATH=/mnt/tank/pytorch/third_party/ideep/mkl-dnn/include
+
+// Path to a program.
+LLVM_FILECHECK_EXE:FILEPATH=LLVM_FILECHECK_EXE-NOTFOUND
+
+// Path to a file.
+MAGMA_INCLUDE_DIR:PATH=MAGMA_INCLUDE_DIR-NOTFOUND
+
+// Path to a library.
+MAGMA_LIBRARIES:FILEPATH=MAGMA_LIBRARIES-NOTFOUND
+
+// Command to build the project
+MAKECOMMAND:STRING=/mnt/tank/venv/lib/python3.10/site-packages/cmake/data/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+
+// Path to the memory checking command, used for memory error detection.
+MEMORYCHECK_COMMAND:FILEPATH=/usr/local/cuda-11.8/bin/cuda-memcheck
+
+// File that contains suppressions for the memory checker
+MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
+
+// 
+MKLDNN_CPU_RUNTIME:STRING=OMP
+
+// Path to a file.
+MKLDNN_INCLUDE_DIR:PATH=/mnt/tank/pytorch/third_party/ideep/mkl-dnn/third_party/oneDNN/include
+
+// Path to a library.
+MKL_CDFT_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libmkl_cdft_core.so
+
+// Path to a file.
+MKL_INCLUDE_DIR:PATH=/mnt/tank/venv/include
+
+// Path to a library.
+MKL_LAPACK_LIBRARIES:FILEPATH=MKL_LAPACK_LIBRARIES-NOTFOUND
+
+// Path to a library.
+MKL_LIBRARIES_dl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libdl.a
+
+// Path to a library.
+MKL_LIBRARIES_m_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libm.so
+
+// Path to a library.
+MKL_LIBRARIES_mkl_core_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libmkl_core.so
+
+// Path to a library.
+MKL_LIBRARIES_mkl_gnu_thread_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libmkl_gnu_thread.so
+
+// Path to a library.
+MKL_LIBRARIES_mkl_intel_lp64_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libmkl_intel_lp64.so
+
+// Path to a library.
+MKL_LIBRARIES_pthread_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.a
+
+// Path to a library.
+MKL_SCALAPACK_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libmkl_scalapack_lp64.so
+
+// Path to a library.
+MKL_SOLVER_LIBRARIES:FILEPATH=MKL_SOLVER_LIBRARIES-NOTFOUND
+
+// MKL flavor: SEQ, TBB or OMP (default)
+MKL_THREADING:STRING=OMP
+
+// Executable for running MPI programs.
+MPIEXEC_EXECUTABLE:FILEPATH=/usr/bin/mpiexec
+
+// Maximum number of processors available to run MPI applications.
+MPIEXEC_MAX_NUMPROCS:STRING=6
+
+// Flag used by MPI to specify the number of processes for mpiexec; the next option will be the number of processes.
+MPIEXEC_NUMPROC_FLAG:STRING=-n
+
+// These flags will be placed after all flags passed to mpiexec.
+MPIEXEC_POSTFLAGS:STRING=
+
+// These flags will be directly before the executable that is being run by mpiexec.
+MPIEXEC_PREFLAGS:STRING=
+
+// MPI CXX additional include directories
+MPI_CXX_ADDITIONAL_INCLUDE_DIRS:STRING=/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi
+
+// MPI compiler for CXX
+MPI_CXX_COMPILER:FILEPATH=/usr/bin/mpicxx
+
+// MPI CXX compiler wrapper include directories
+MPI_CXX_COMPILER_INCLUDE_DIRS:STRING=/usr/lib/x86_64-linux-gnu/openmpi/include;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi
+
+// MPI CXX compilation definitions
+MPI_CXX_COMPILE_DEFINITIONS:STRING=
+
+// MPI CXX compilation options
+MPI_CXX_COMPILE_OPTIONS:STRING=
+
+// Path to a file.
+MPI_CXX_HEADER_DIR:PATH=/usr/lib/x86_64-linux-gnu/openmpi/include
+
+// MPI CXX libraries to link against
+MPI_CXX_LIB_NAMES:STRING=mpi_cxx;mpi
+
+// MPI CXX linker flags
+MPI_CXX_LINK_FLAGS:STRING=
+
+// If true, the MPI-2 C++ bindings are disabled using definitions.
+MPI_CXX_SKIP_MPICXX:BOOL=OFF
+
+// MPI C additional include directories
+MPI_C_ADDITIONAL_INCLUDE_DIRS:STRING=/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi
+
+// MPI compiler for C
+MPI_C_COMPILER:FILEPATH=/usr/bin/mpicc
+
+// MPI C compiler wrapper include directories
+MPI_C_COMPILER_INCLUDE_DIRS:STRING=/usr/lib/x86_64-linux-gnu/openmpi/include;/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi
+
+// MPI C compilation definitions
+MPI_C_COMPILE_DEFINITIONS:STRING=
+
+// MPI C compilation options
+MPI_C_COMPILE_OPTIONS:STRING=
+
+// Path to a file.
+MPI_C_HEADER_DIR:PATH=/usr/lib/x86_64-linux-gnu/openmpi/include
+
+// MPI C libraries to link against
+MPI_C_LIB_NAMES:STRING=mpi
+
+// MPI C linker flags
+MPI_C_LINK_FLAGS:STRING=
+
+// Location of the mpi library for MPI
+MPI_mpi_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
+
+// Location of the mpi_cxx library for MPI
+MPI_mpi_cxx_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so
+
+// NEON available on host
+NEON_FOUND:BOOL=false
+
+// Backend for micro-kernels implementation
+NNPACK_BACKEND:STRING=auto
+
+// 
+NNPACK_BUILD_BENCHMARKS:BOOL=OFF
+
+// Build NNPACK unit tests
+NNPACK_BUILD_TESTS:BOOL=OFF
+
+// Build only NNPACK functions for convolutional layer
+NNPACK_CONVOLUTION_ONLY:BOOL=OFF
+
+// Build NNPACK for custom thread pool
+NNPACK_CUSTOM_THREADPOOL:BOOL=OFF
+
+// Build only NNPACK functions for inference
+NNPACK_INFERENCE_ONLY:BOOL=OFF
+
+// 
+NNPACK_LIBRARY_TYPE:STRING=static
+
+// Path to a file.
+Numa_INCLUDE_DIR:PATH=/usr/include
+
+// Path to a library.
+Numa_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libnuma.so
+
+// Path to a program.
+OMPI_INFO:FILEPATH=/usr/bin/ompi_info
+
+// Use dummy backend in onnxifi test driver.
+ONNXIFI_DUMMY_BACKEND:BOOL=OFF
+
+// Enable onnxifi extensions.
+ONNXIFI_ENABLE_EXT:BOOL=OFF
+
+// Build ONNX micro-benchmarks
+ONNX_BUILD_BENCHMARKS:BOOL=OFF
+
+// Build ONNX C++ APIs Tests
+ONNX_BUILD_TESTS:BOOL=OFF
+
+// Build with coverage instrumentation
+ONNX_COVERAGE:BOOL=OFF
+
+// Disable exception handling.
+ONNX_DISABLE_EXCEPTIONS:BOOL=OFF
+
+// Disable static registration for onnx operator schemas.
+ONNX_DISABLE_STATIC_REGISTRATION:BOOL=OFF
+
+// Generate protobuf python type stubs
+ONNX_GEN_PB_TYPE_STUBS:BOOL=ON
+
+// Enable traditional ONNX ML API.
+ONNX_ML:BOOL=ON
+
+// A namespace for ONNX; needed to build with other frameworks that share ONNX.
+ONNX_NAMESPACE:STRING=onnx_torch
+
+// Use lite protobuf instead of full.
+ONNX_USE_LITE_PROTO:BOOL=OFF
+
+// Build ONNX using protobuf shared library. Sets PROTOBUF_USE_DLLS CMAKE Flag and Protobuf_USE_STATIC_LIBS. 
+ONNX_USE_PROTOBUF_SHARED_LIBS:BOOL=OFF
+
+// Generate code by proto3
+ONNX_VERIFY_PROTO3:BOOL=OFF
+
+// Build with Werror
+ONNX_WERROR:BOOL=OFF
+
+// path to Intel SDK for OpenCL applications.
+    Use this option to specify custom location for OpenCL.
+OPENCLROOT:STRING=
+
+// OpenMP Support found
+OPENMP_FOUND:BOOL=TRUE
+
+// Path to a library.
+OPENSSL_CRYPTO_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
+
+// Path to a file.
+OPENSSL_INCLUDE_DIR:PATH=/usr/include
+
+// Path to a library.
+OPENSSL_SSL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libssl.so
+
+// The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/opencv4
+
+// CXX compiler flags for OpenMP parallelization
+OpenMP_CXX_FLAGS:STRING=-fopenmp
+
+// CXX compiler libraries for OpenMP parallelization
+OpenMP_CXX_LIB_NAMES:STRING=gomp;pthread
+
+// C compiler flags for OpenMP parallelization
+OpenMP_C_FLAGS:STRING=-fopenmp
+
+// C compiler libraries for OpenMP parallelization
+OpenMP_C_LIB_NAMES:STRING=gomp;pthread
+
+// Path to the gomp library for OpenMP
+OpenMP_gomp_LIBRARY:FILEPATH=/usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so
+
+// Path to the pthread library for OpenMP
+OpenMP_pthread_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.a
+
+// Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+// pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
+// print cmake debug information
+PRINT_CMAKE_DEBUG_INFO:BOOL=FALSE
+
+// PSimd source directory
+PSIMD_SOURCE_DIR:STRING=/mnt/tank/pytorch/third_party/psimd
+
+// Enable deprecated API functions
+PTHREADPOOL_ALLOW_DEPRECATED_API:BOOL=ON
+
+// 
+PTHREADPOOL_BUILD_BENCHMARKS:BOOL=OFF
+
+// 
+PTHREADPOOL_BUILD_TESTS:BOOL=OFF
+
+// Enable fast path using atomic decrement instead of atomic compare-and-swap
+PTHREADPOOL_ENABLE_FASTPATH:BOOL=ON
+
+// 
+PTHREADPOOL_LIBRARY_TYPE:STRING=static
+
+// pthreadpool source directory
+PTHREADPOOL_SOURCE_DIR:STRING=/mnt/tank/pytorch/third_party/pthreadpool
+
+// Synchronization primitive (condvar, futex, gcd, event, or default) for worker threads
+PTHREADPOOL_SYNC_PRIMITIVE:STRING=default
+
+// enum34 (Python package) source directory
+PYTHON_ENUM_SOURCE_DIR:STRING=/mnt/tank/pytorch/third_party/python-enum
+
+// Path to a program.
+PYTHON_EXECUTABLE:FILEPATH=/mnt/tank/venv/bin/python
+
+// Path to a file.
+PYTHON_INCLUDE_DIR:PATH=/usr/include/python3.10
+
+// Path to a library.
+PYTHON_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpython3.10.so.1.0
+
+// Path to a library.
+PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
+
+// Python installation path (relative to CMake installation prefix)
+PYTHON_LIB_REL_PATH:STRING=lib/python3.10/site-packages
+
+// PeachPy (Python package) source directory
+PYTHON_PEACHPY_SOURCE_DIR:STRING=/mnt/tank/pytorch/third_party/python-peachpy
+
+// six (Python package) source directory
+PYTHON_SIX_SOURCE_DIR:STRING=/mnt/tank/pytorch/third_party/python-six
+
+// Build QNNPACK benchmarks
+PYTORCH_QNNPACK_BUILD_BENCHMARKS:BOOL=OFF
+
+// Build QNNPACK unit tests
+PYTORCH_QNNPACK_BUILD_TESTS:BOOL=OFF
+
+// Build QNNPACK for custom thread pool
+PYTORCH_QNNPACK_CUSTOM_THREADPOOL:BOOL=OFF
+
+// 
+PYTORCH_QNNPACK_LIBRARY_TYPE:STRING=static
+
+// Path to a program.
+ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
+
+// Path to a program.
+ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
+
+// build for qemu
+QEMU:BOOL=OFF
+
+// Build QNNPACK benchmarks
+QNNPACK_BUILD_BENCHMARKS:BOOL=OFF
+
+// Build QNNPACK unit tests
+QNNPACK_BUILD_TESTS:BOOL=OFF
+
+// Build QNNPACK for custom thread pool
+QNNPACK_CUSTOM_THREADPOOL:BOOL=OFF
+
+// 
+QNNPACK_LIBRARY_TYPE:STRING=static
+
+// Path to a program.
+SCCACHE_EXECUTABLE:FILEPATH=SCCACHE_EXECUTABLE-NOTFOUND
+
+// Path to a program.
+SDE_COMMAND:FILEPATH=SDE_COMMAND-NOTFOUND
+
+// Path to a program.
+SED_COMMAND:FILEPATH=/usr/bin/sed
+
+// Path to the yaml file that contains the list of operators to include for custom build. Include all operators by default.
+SELECTED_OP_LIST:STRING=
+
+// Name of the computer/site where compile is being run
+SITE:STRING=sd
+
+// List of SIMD architectures supported by libsleef.
+SLEEF_ALL_SUPPORTED_EXTENSIONS:STRING=AVX512FNOFMA;AVX512F;AVX2;AVX2128;FMA4;AVX;SSE4;SSE2;SVENOFMA;SVE;ADVSIMDNOFMA;ADVSIMD;NEON32;NEON32VFPV4;VSX;VSXNOFMA;VSX3;VSX3NOFMA;VXE;VXENOFMA;VXE2;VXE2NOFMA;PUREC_SCALAR;PURECFMA_SCALAR
+
+// Path for finding sleef specific cmake scripts
+SLEEF_SCRIPT_PATH:PATH=/mnt/tank/pytorch/third_party/sleef/cmake/Scripts
+
+// Show SLEEF configuration status messages.
+SLEEF_SHOW_CONFIG:BOOL=ON
+
+// Show cmake error log.
+SLEEF_SHOW_ERROR_LOG:BOOL=OFF
+
+// List of SIMD architectures supported by libsleef for GNU ABI.
+SLEEF_SUPPORTED_GNUABI_EXTENSIONS:STRING=SSE2;AVX;AVX2;AVX512F;ADVSIMD;SVE
+
+// List of SIMD architectures supported by libsleef.
+SLEEF_SUPPORTED_LIBM_EXTENSIONS:STRING=AVX512FNOFMA;AVX512F;AVX2;AVX2128;FMA4;AVX;SSE4;SSE2;SVENOFMA;SVE;ADVSIMDNOFMA;ADVSIMD;NEON32;NEON32VFPV4;VSX;VSXNOFMA;VSX3;VSX3NOFMA;VXE;VXENOFMA;VXE2;VXE2NOFMA;PUREC_SCALAR;PURECFMA_SCALAR
+
+// Perform tests on implementations with all vector extensions
+SLEEF_TEST_ALL_IUT:BOOL=OFF
+
+// Path to a program.
+SPHINX_EXECUTABLE:FILEPATH=SPHINX_EXECUTABLE-NOTFOUND
+
+// Name of the backend for which static dispatch code is generated, e.g.: CPU.
+STATIC_DISPATCH_BACKEND:BOOL=OFF
+
+// path to Thread Building Blocks (TBB).
+    Use this option to specify TBB installation locaton.
+TBBROOT:STRING=
+
+// Torch build version
+TORCH_BUILD_VERSION:STRING=2.0.0a0+gitc55f697
+
+// Disable GPU asserts by default
+TORCH_DISABLE_GPU_ASSERTS:BOOL=ON
+
+// Build benchmarks
+TP_BUILD_BENCHMARK:BOOL=OFF
+
+// Build libuv from source
+TP_BUILD_LIBUV:BOOL=ON
+
+// Build misc tools
+TP_BUILD_MISC:BOOL=OFF
+
+// Build python bindings
+TP_BUILD_PYTHON:BOOL=OFF
+
+// Build tests
+TP_BUILD_TESTING:BOOL=OFF
+
+// Enable cross-memory attach channel
+TP_ENABLE_CMA:BOOL=ON
+
+// Enable CUDA GpuDirect (InfiniBand) channel
+TP_ENABLE_CUDA_GDR:BOOL=ON
+
+// 
+TP_ENABLE_CUDA_IPC:BOOL=ON
+
+// Enable InfiniBand transport
+TP_ENABLE_IBV:BOOL=ON
+
+// Enable shared-memory transport
+TP_ENABLE_SHM:BOOL=ON
+
+// Directory in which to install public headers
+TP_INSTALL_INCLUDEDIR:STRING=include
+
+// Directory in which to install libraries
+TP_INSTALL_LIBDIR:STRING=lib
+
+// 
+TP_STATIC_OR_SHARED:STRING=STATIC
+
+// Enable support for CUDA tensors
+TP_USE_CUDA:BOOL=ON
+
+// Master flag to build Lite Interpreter with tracing build option
+TRACING_BASED:BOOL=OFF
+
+// Use Address+Undefined Sanitizers
+USE_ASAN:BOOL=OFF
+
+// USE C10D GLOO
+USE_C10D_GLOO:BOOL=ON
+
+// USE C10D MPI
+USE_C10D_MPI:BOOL=ON
+
+// USE C10D NCCL
+USE_C10D_NCCL:BOOL=ON
+
+// Attempt using CCache to wrap the compilation
+USE_CCACHE:BOOL=ON
+
+// Colorize output during compilation
+USE_COLORIZE_OUTPUT:BOOL=ON
+
+// Use the CoreML backend through delegate APIs
+USE_COREML_DELEGATE:BOOL=OFF
+
+// Compile C/C++ with code coverage flags
+USE_CPP_CODE_COVERAGE:BOOL=OFF
+
+// Build with CUDA support
+USE_CUDA:BOOL=ON
+
+// Use cuDNN
+USE_CUDNN:BOOL=ON
+
+// Use CUPTI as a shared library
+USE_CUPTI_SO:BOOL=ON
+
+// Use distributed
+USE_DISTRIBUTED:BOOL=ON
+
+// Use experimental cuDNN v8 API
+USE_EXPERIMENTAL_CUDNN_V8_API:BOOL=ON
+
+// Use FakeLowp operators
+USE_FAKELOWP:BOOL=OFF
+
+// Use parallel NVCC build
+USE_FAST_NVCC:BOOL=OFF
+
+// Use FBGEMM (quantized 8-bit server operators)
+USE_FBGEMM:BOOL=ON
+
+// Use ffmpeg
+USE_FFMPEG:BOOL=1
+
+// Whether to build the flash_attention kernel for scaled dot product attention
+USE_FLASH_ATTENTION:BOOL=ON
+
+// Use GFLAGS
+USE_GFLAGS:BOOL=OFF
+
+// Use GLOG
+USE_GLOG:BOOL=OFF
+
+// Use Gloo. Only available if USE_DISTRIBUTED is on.
+USE_GLOO:BOOL=ON
+
+// Use Gloo with OpenSSL. Only available if USE_GLOO is on.
+USE_GLOO_WITH_OPENSSL:BOOL=OFF
+
+// Use ld.gold to link
+USE_GOLD_LINKER:BOOL=OFF
+
+// Support ibverbs transport
+USE_IBVERBS:BOOL=OFF
+
+// 
+USE_INTERNAL_PTHREADPOOL_IMPL:BOOL=OFF
+
+// Use Intel(R) VTune Profiler ITT functionality
+USE_ITT:BOOL=ON
+
+// Use Kineto profiling library
+USE_KINETO:BOOL=ON
+
+// Use LEVELDB
+USE_LEVELDB:BOOL=OFF
+
+// Build libuv transport
+USE_LIBUV:BOOL=OFF
+
+// Enable codegen unboxing for ATen ops, need to work with static dispatch in order to work properly.
+USE_LIGHTWEIGHT_DISPATCH:BOOL=OFF
+
+// Enable 
+USE_LITE_INTERPRETER_PROFILER:BOOL=ON
+
+// Use lite protobuf instead of full.
+USE_LITE_PROTO:BOOL=OFF
+
+// Use LMDB
+USE_LMDB:BOOL=OFF
+
+// Use MAGMA
+USE_MAGMA:BOOL=OFF
+
+// Use Metal for Caffe2 iOS build
+USE_METAL:BOOL=OFF
+
+// Use MKLDNN. Only available on x86, x86_64, and AArch64.
+USE_MKLDNN:BOOL=ON
+
+// Use CBLAS in MKLDNN
+USE_MKLDNN_CBLAS:BOOL=OFF
+
+// Use MPI for Caffe2. Only available if USE_DISTRIBUTED is on.
+USE_MPI:BOOL=ON
+
+// Use -march=native
+USE_NATIVE_ARCH:BOOL=OFF
+
+// Support using NCCL for local collectives
+USE_NCCL:BOOL=ON
+
+// Enable UCC support for ProcessGroupNCCL. Only available if USE_C10D_NCCL is on.
+USE_NCCL_WITH_UCC:BOOL=OFF
+
+// Use NNAPI
+USE_NNAPI:BOOL=OFF
+
+// Use NNPACK
+USE_NNPACK:BOOL=ON
+
+// Use NUMA. Only available on Linux.
+USE_NUMA:BOOL=ON
+
+// Use NumPy
+USE_NUMPY:BOOL=ON
+
+// Use NVRTC. Only available if USE_CUDA is on.
+USE_NVRTC:BOOL=OFF
+
+// Use observers module.
+USE_OBSERVERS:BOOL=ON
+
+// Use OpenCL
+USE_OPENCL:BOOL=OFF
+
+// Use OpenCV
+USE_OPENCV:BOOL=1
+
+// Use OpenMP for parallel code
+USE_OPENMP:BOOL=ON
+
+// Whether ATen should generate separate headers for each operator
+USE_PER_OPERATOR_HEADERS:BOOL=ON
+
+// Use pre-compiled headers to accelerate build.
+USE_PRECOMPILED_HEADERS:BOOL=OFF
+
+// Use profiling
+USE_PROF:BOOL=OFF
+
+// 
+USE_PTHREADPOOL:BOOL=ON
+
+// Use Metal for PyTorch iOS build
+USE_PYTORCH_METAL:BOOL=OFF
+
+// Export Metal models on MacOSX desktop
+USE_PYTORCH_METAL_EXPORT:BOOL=OFF
+
+// Use ATen/QNNPACK (quantized 8-bit operators)
+USE_PYTORCH_QNNPACK:BOOL=ON
+
+// Use QNNPACK (quantized 8-bit operators)
+USE_QNNPACK:BOOL=ON
+
+// Support using RCCL for local collectives
+USE_RCCL:BOOL=ON
+
+// Support using Redis for rendezvous
+USE_REDIS:BOOL=OFF
+
+// Use RocksDB
+USE_ROCKSDB:BOOL=OFF
+
+// Use ROCm
+USE_ROCM:BOOL=OFF
+
+// options include address, leak, ...
+USE_SANITIZER:STRING=
+
+// Use sleef for arm
+USE_SLEEF_FOR_ARM_VEC256:BOOL=OFF
+
+// Use Qualcomm's SNPE library
+USE_SNPE:BOOL=OFF
+
+// Enable 
+USE_SOURCE_DEBUG_ON_MOBILE:BOOL=ON
+
+// Use cuDNN static libraries
+USE_STATIC_CUDNN:BOOL=OFF
+
+// Prefer to link with MKL statically (Unix only)
+USE_STATIC_MKL:BOOL=OFF
+
+// Use static NCCL
+USE_STATIC_NCCL:BOOL=OFF
+
+// Use system-provided google benchmark.
+USE_SYSTEM_BENCHMARK:BOOL=OFF
+
+// Use system-provided cpuinfo.
+USE_SYSTEM_CPUINFO:BOOL=OFF
+
+// Use system Eigen instead of the one under third_party
+USE_SYSTEM_EIGEN_INSTALL:BOOL=OFF
+
+// Use system-provided fp16.
+USE_SYSTEM_FP16:BOOL=OFF
+
+// Use system-provided fxdiv.
+USE_SYSTEM_FXDIV:BOOL=OFF
+
+// Use system-provided gloo.
+USE_SYSTEM_GLOO:BOOL=OFF
+
+// Use all available system-provided libraries.
+USE_SYSTEM_LIBS:BOOL=OFF
+
+// Use system-wide NCCL
+USE_SYSTEM_NCCL:BOOL=OFF
+
+// Use system-provided onnx.
+USE_SYSTEM_ONNX:BOOL=OFF
+
+// Use system-provided psimd.
+USE_SYSTEM_PSIMD:BOOL=OFF
+
+// Use system-provided pthreadpool.
+USE_SYSTEM_PTHREADPOOL:BOOL=OFF
+
+// Use system-provided PyBind11.
+USE_SYSTEM_PYBIND11:BOOL=OFF
+
+// Use system-provided sleef.
+USE_SYSTEM_SLEEF:BOOL=OFF
+
+// Use system-provided xnnpack.
+USE_SYSTEM_XNNPACK:BOOL=OFF
+
+// Use TBB (Deprecated)
+USE_TBB:BOOL=OFF
+
+// Build TCP-TLS transport with dynamically linked OpenSSL (Linux only)
+USE_TCP_OPENSSL_LINK:BOOL=OFF
+
+// Build TCP-TLS transport with OpenSSL dynamically loaded during runtime (Linux only)
+USE_TCP_OPENSSL_LOAD:BOOL=OFF
+
+// Use TensorPipe. Only available if USE_DISTRIBUTED is on.
+USE_TENSORPIPE:BOOL=ON
+
+// Using Nvidia TensorRT library
+USE_TENSORRT:BOOL=OFF
+
+// Use Thread Sanitizer
+USE_TSAN:BOOL=OFF
+
+// Use UCC. Only available if USE_DISTRIBUTED is on.
+USE_UCC:BOOL=OFF
+
+// Use Valgrind. Only available on Linux.
+USE_VALGRIND:BOOL=ON
+
+// Vulkan - Use fp16 inference
+USE_VULKAN_FP16_INFERENCE:BOOL=OFF
+
+// Vulkan - Use relaxed precision math in the kernels (mediump)
+USE_VULKAN_RELAXED_PRECISION:BOOL=OFF
+
+// Use XNNPACK
+USE_XNNPACK:BOOL=ON
+
+// Use ZMQ
+USE_ZMQ:BOOL=OFF
+
+// Use ZSTD
+USE_ZSTD:BOOL=OFF
+
+// Build with -Werror supported by the compiler
+WERROR:BOOL=OFF
+
+// OpenMP support if available?
+WITH_OPENMP:BOOL=ON
+
+// Build XNNPACK benchmarks
+XNNPACK_BUILD_BENCHMARKS:BOOL=OFF
+
+// Build XNNPACK unit tests
+XNNPACK_BUILD_TESTS:BOOL=OFF
+
+// Build XNNPACK with assembly micro-kernels
+XNNPACK_ENABLE_ASSEMBLY:BOOL=ON
+
+// Build XNNPACK with JIT micro-kernels
+XNNPACK_ENABLE_JIT:BOOL=OFF
+
+// Build XNNPACK with optimized memory allocation scheme
+XNNPACK_ENABLE_MEMOPT:BOOL=ON
+
+// Build XNNPACK with graph rewriting for sparse inference
+XNNPACK_ENABLE_SPARSE:BOOL=ON
+
+// XNNPACK include directory
+XNNPACK_INCLUDE_DIR:STRING=/mnt/tank/pytorch/third_party/XNNPACK/include
+
+// 
+XNNPACK_LIBRARY_TYPE:STRING=static
+
+// Use system-provided dependency libraries
+XNNPACK_USE_SYSTEM_LIBS:BOOL=OFF
+
+// specifies which threadpool implementation to use when
+    DNNL_GRAPH_CPU_RUNTIME=THREADPOOL is selected. Valid values: STANDALONE
+_DNNL_GRAPH_TEST_THREADPOOL_IMPL:STRING=STANDALONE
+
+// specifies which threadpool implementation to use when
+    DNNL_CPU_RUNTIME=THREADPOOL is selected. Valid values: STANDALONE, EIGEN,
+    TBB
+_DNNL_TEST_THREADPOOL_IMPL:STRING=STANDALONE
+
+// Path to a file.
+__header_dir:PATH=__header_dir-NOTFOUND
+
+// Build all of Google Mock's own tests.
+gmock_build_tests:BOOL=OFF
+
+// Build gtest's sample programs.
+gtest_build_samples:BOOL=OFF
+
+// Build all of gtest's own tests.
+gtest_build_tests:BOOL=OFF
+
+// Disable uses of pthreads in gtest.
+gtest_disable_pthreads:BOOL=OFF
+
+// Use shared (DLL) run-time lib even when Google Test is built as static lib.
+gtest_force_shared_crt:BOOL=ON
+
+// Build gtest with internal symbols hidden in shared libraries.
+gtest_hide_internal_symbols:BOOL=OFF
+
+// Path to a library.
+pkgcfg_lib__OPENSSL_crypto:FILEPATH=/usr/lib/x86_64-linux-gnu/libcrypto.so
+
+// Path to a library.
+pkgcfg_lib__OPENSSL_ssl:FILEPATH=/usr/lib/x86_64-linux-gnu/libssl.so
+
+// Build conformance tests
+protobuf_BUILD_CONFORMANCE:BOOL=OFF
+
+// Build examples
+protobuf_BUILD_EXAMPLES:BOOL=OFF
+
+// Build libprotoc and protoc compiler
+protobuf_BUILD_PROTOC_BINARIES:BOOL=ON
+
+// Build Shared Libraries
+protobuf_BUILD_SHARED_LIBS:BOOL=OFF
+
+// Build tests
+protobuf_BUILD_TESTS:BOOL=OFF
+
+// Default debug postfix
+protobuf_DEBUG_POSTFIX:STRING=d
+
+// Install the examples folder
+protobuf_INSTALL_EXAMPLES:BOOL=OFF
+
+// CMake build-in FindProtobuf.cmake module compatible
+protobuf_MODULE_COMPATIBLE:BOOL=OFF
+
+// Link static runtime libraries
+protobuf_MSVC_STATIC_RUNTIME:BOOL=OFF
+
+// Enable for verbose output
+protobuf_VERBOSE:BOOL=OFF
+
+// Build with zlib support
+protobuf_WITH_ZLIB:BOOL=OFF
+
