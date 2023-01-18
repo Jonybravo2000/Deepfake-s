@@ -1,0 +1,12 @@
+[submodule "pytorch"]
+	path = pytorch
+	url = https://github.com/pytorch/pytorch.git
+
+[submodule "xformers"]
+	path = xformers
+	url = https://github.com/facebookresearch/xformers.git
+
+[submodule "vision"]
+	path = vision
+	url = https://github.com/pytorch/vision.git
+
