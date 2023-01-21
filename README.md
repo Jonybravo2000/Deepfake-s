@@ -1,5 +1,9 @@
 # Prebuilt wheels for PyTorch 2.0 for Cuda 11.8
 
+# UPDATE:
+
+Pytorch has official cuda 11.8 build now: https://download.pytorch.org/whl/nightly/cu118
+
 # DOWNLOADS CAN BE FOUND IN RELEASES -->
 
 **Why?**
